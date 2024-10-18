@@ -6,6 +6,7 @@ source venv/bin/activate
 # pip install -r requirements.txt # ?
 pip install Django Django-ninja
 cd yoyj_feature_dev_insight
+python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
 # yourname password
