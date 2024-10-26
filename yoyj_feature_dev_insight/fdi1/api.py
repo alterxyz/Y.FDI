@@ -28,6 +28,9 @@ class FeatureRawIn(Schema):
 class ContentIn(Schema):
     content: str
 
+class CommentIn(Schema):
+    feature_id: str
+    comment: str
 
 # Feature R - Refined and Ready for Development 精炼或者说准备或正在开发的需求
 
@@ -63,8 +66,8 @@ def put_feature_raw(request, data: FeatureRawIn):
 
 # 添加评论
 @api.post("/feature_raw_add_comment", auth=AuthBearer())
-def api_add_comment(request, feature_id: str, comment: str):
-    result = tools.add_comment_to_feature(feature_id, comment)
+def api_add_comment(request, data: CommentIn):
+    result = tools.add_comment_to_feature(data.feature_id, data.comment)
     return result
 
 

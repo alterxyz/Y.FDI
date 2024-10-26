@@ -6,6 +6,13 @@ Y.FDI is an AI-driven system for managing product development, from feature idea
 
 Y.FDI streamlines the product development process by integrating feature management, development tracking, and insight generation into a unified system. It leverages AI to process and analyze data from various sources, providing a comprehensive view of your product development lifecycle.
 
+## Philosophy
+
+This is a low code, high SOP project.
+Even though it is deeply powered by ORM, LLM, embeddings, VectorDB.
+
+It gives flexibility that allows changings, as well as just enough limitations to make it runable, aiming to archive perfect balance between idealism and pragmatism.
+
 ## Core Components
 
 ### Features

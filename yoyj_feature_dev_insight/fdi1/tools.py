@@ -1,45 +1,45 @@
 # tools.py
 
 from django.utils.html import escape
-from .models import FeatureBaseRaw, FeatureBaseR, DevBase, MacroBase
+from .models import FeatureBaseRaw, FeatureBaseR, DevBaseAlpha, MacroBaseAlpha
 from django.shortcuts import get_object_or_404
 
-# 获取最新的MacroBase记录内容
+# 获取最新的MacroBaseAlpha记录内容
 
 
 def get_latest_macro_base_content():
     try:
-        latest_macro_base = MacroBase.objects.latest("created_at")
+        latest_macro_base = MacroBaseAlpha.objects.latest("created_at")
         return latest_macro_base.content
-    except MacroBase.DoesNotExist:
-        return "No MacroBase records found."
+    except MacroBaseAlpha.DoesNotExist:
+        return "No MacroBaseAlpha records found."
 
 
-# 简单创建/更新一个MacroBase记录
+# 简单创建/更新一个MacroBaseAlpha记录
 
 
 def put_macro_base_content(content):
-    MacroBase.objects.create(content=content)
-    return "MacroBase content has been successfully updated."
+    MacroBaseAlpha.objects.create(content=content)
+    return "MacroBaseAlpha content has been successfully updated."
 
 
-# 获取最新的DevBase记录内容
+# 获取最新的DevBaseAlpha记录内容
 
 
 def get_latest_dev_base_content():
     try:
-        latest_dev_base = DevBase.objects.latest("created_at")
+        latest_dev_base = DevBaseAlpha.objects.latest("created_at")
         return latest_dev_base.content
-    except DevBase.DoesNotExist:
-        return "No DevBase records found."
+    except DevBaseAlpha.DoesNotExist:
+        return "No DevBaseAlpha records found."
 
 
-# 简单创建/更新一个DevBase记录
+# 简单创建/更新一个DevBaseAlpha记录
 
 
 def put_dev_base_content(content):
-    DevBase.objects.create(content=content)
-    return "DevBase content has been successfully updated."
+    DevBaseAlpha.objects.create(content=content)
+    return "DevBaseAlpha content has been successfully updated."
 
 
 # 存储一个FeatureBaseR记录. 这应该是慎重的, 这意味着立项.
