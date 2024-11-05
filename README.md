@@ -13,6 +13,8 @@ Even though it is deeply powered by ORM, LLM, embeddings, VectorDB.
 
 It gives flexibility that allows changings, as well as just enough limitations to make it runable, aiming to archive perfect balance between idealism and pragmatism.
 
+The true aim is to allow wisdom to emerge and to nurture growth. With skill and ease, we reshape the world and all things in it, transforming them into the forms we desire and the way they ought to be.
+
 ## Core Components
 
 ### Features
@@ -82,6 +84,50 @@ graph LR
 
     FR -.->|Potential Impact| M
     M -.->|Vision Filtering| FR
+```
+
+#### Features and Development
+
+```mermaid
+graph LR
+    subgraph F [Feature]
+        FR[Raw]
+        FF[Refined & Ready]
+        FR -->|Refinement| FF
+        FF -->|notification| FR
+    end
+    D[Development]
+
+    F <--->|Defines & Constrains| D
+    FF -->|Sets Requirements| D
+    D -->|Updates Status| FF
+```
+
+#### About Macro
+
+```mermaid
+graph LR
+    subgraph F [Feature]
+        FR[Raw]
+        FF[Refined & Ready]
+        FR -->|Refinement| FF
+    end
+    D[Development]
+    M[Macro]
+    I[Insight]
+
+    M -->|Guides & Strategic Alignment| F
+    M -->|Vision Filtering: Ra->Re| F
+    F -->|Potential Impact Assumption| M
+
+    M -->|Directs| D
+    D -->|Status & progress| M
+
+    I -->|Shapes & Updates / Inside member| M
+    I -->|Market Feedback / Outside| M
+    M -->|Bedrock of| I
+
+    
 ```
 
 ## Technical Architecture
